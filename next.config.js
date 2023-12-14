@@ -4,6 +4,9 @@ const nextConfig = {
   compiler: {
     emotion: true,
   },
+  experimental: {
+    optimizePackageImports: ["chakra-ui", "framer-motion"],
+  },
 };
 
 module.exports = nextConfig;

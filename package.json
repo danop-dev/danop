@@ -13,25 +13,28 @@
     "format:check": "prettier --check --ignore-path=.gitignore ."
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.1.1",
-    "@chakra-ui/react": "^2.8.2",
+    "@chakra-ui/next-js": "^2.1.5",
+    "@chakra-ui/react": "^2.8.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@types/node": "20.10.4",
-    "@types/react": "18.2.45",
-    "@types/react-dom": "18.2.17",
-    "eslint": "8.55.0",
-    "eslint-config-next": "14.0.4",
+    "@types/node": "20.7.1",
+    "@types/react": "18.2.23",
+    "@types/react-dom": "18.2.8",
+    "eslint": "8.50.0",
+    "eslint-config-next": "13.5.3",
     "framer-motion": "^9.1.7",
-    "next": "14.0.4",
+    "next": "^13.5.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.49.2",
-    "typescript": "5.3.3"
+    "react-hook-form": "^7.46.2",
+    "react-icons": "^4.12.0",
+    "sass": "^1.68.0",
+    "typescript": "5.2.2"
   },
   "devDependencies": {
     "@tanstack/react-query": "^4.36.1",
     "@tanstack/react-query-devtools": "^4.36.1",
+    "autoprefixer": "^10.4.16",
     "eslint-config-prettier": "^8.10.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
@@ -40,5 +43,8 @@
   },
   "lint-staged": {
     "*": "prettier --write --ignore-unknown"
+  },
+  "engines": {
+    "node": ">=18.17.0"
   }
 }

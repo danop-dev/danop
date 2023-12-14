@@ -1,0 +1,186 @@
+@keyframes loader-ping-wave {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes loader-flow-cross-spin {
+  0%,
+  to {
+    box-shadow: 0.2em 0 0 0 currentcolor;
+  }
+
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+
+  25% {
+    box-shadow: 0 0.2em 0 0 currentcolor;
+  }
+
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+
+  75% {
+    box-shadow: 0 -0.2em 0 0 currentcolor;
+  }
+
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
+
+.loader:has(.ping-wave) {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.loader > .ping-wave {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.loader > .ping-wave:after,
+.loader > .ping-wave:before {
+  // --tw-bg-opacity: 1;
+  animation: loader-ping-wave 2s linear infinite;
+  // background-color: rgba(0, 145, 255);
+  border-radius: 50%;
+  box-sizing: border-box;
+  content: "";
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.loader > .ping-wave:after {
+  animation-delay: 1s;
+}
+
+.loader.xs > .flow-cross {
+  font-size: 0.6rem;
+}
+
+.loader.sm > .flow-cross {
+  font-size: 1.2rem;
+}
+
+.loader.md > .flow-cross {
+  font-size: 1.4rem;
+}
+
+.loader.lg > .flow-cross {
+  font-size: 1.6rem;
+}
+
+.loader.xl > .flow-cross {
+  font-size: 2rem;
+}
+
+.loader > .flow-cross {
+  // --tw-text-opacity: 1;
+  border-radius: 50%;
+  color: rgba(255, 255, 255);
+  font-size: 1.2rem;
+  height: 100%;
+  perspective: 1000px;
+  transform: rotate(45deg);
+  width: 100%;
+}
+
+.loader > .flow-cross:after,
+.loader > .flow-cross:before {
+  animation: loader-flow-cross-spin 1s linear infinite;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: inherit;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotateX(70deg);
+  width: inherit;
+}
+
+.loader > .flow-cross:after {
+  --tw-text-opacity: 1;
+  animation-delay: 0.4s;
+  // color: rgba(0, 145, 255);
+  transform: rotateY(70deg);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.loader.xs {
+  flex-basis: 0.75rem;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.loader.sm {
+  flex-basis: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.loader,
+.loader.md {
+  flex-basis: 2.5rem;
+  flex-shrink: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.loader.lg {
+  flex-basis: 3.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.loader.xl {
+  flex-basis: 5rem;
+  height: 5rem;
+  width: 5rem;
+}
+
+.loader.xs * {
+  font-size: 0.18rem;
+}
+
+.loader.sm * {
+  font-size: 0.3rem;
+}
+
+.loader *,
+.loader.md * {
+  font-size: 0.42rem;
+}
+
+.loader.lg * {
+  font-size: 0.68rem;
+}
+
+.loader.xl * {
+  font-size: 0.92rem;
+}
